@@ -372,28 +372,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#with-pip" class="md-nav__link">
-    with pip
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#with-docker" class="md-nav__link">
-    with docker
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#with-git" class="md-nav__link">
     with git
   </a>
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#with-pack" class="md-nav__link">
+    with pack
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    Modules
+  </a>
   
 </li>
       
@@ -516,28 +516,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#with-pip" class="md-nav__link">
-    with pip
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#with-docker" class="md-nav__link">
-    with docker
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#with-git" class="md-nav__link">
     with git
   </a>
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#with-pack" class="md-nav__link">
+    with pack
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    Modules
+  </a>
   
 </li>
       
@@ -556,105 +556,45 @@
                 
                 
                 <h1 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
-<p>Material for MkDocs is a theme for <a href="https://www.mkdocs.org">MkDocs</a>, a static site generator geared
-towards (technical) project documentation. If you're familiar with Python, you
-can install Material for MkDocs with <a href="#with-pip"><code>pip</code></a>, the Python package manager.
-If not, we recommended using <a href="#with-docker"><code>docker</code></a>.</p>
-<p>In case you're running into problems, consult the <a href="../troubleshooting/">troubleshooting</a> section.</p>
+<p>netSys is a framework designed for modularity, simplicity, ease-of-use and compatibility.
+It's simple to install netSys, use either <a href="#with-git">git</a> or <a href="#with-pack">pack</a>.</p>
+<p>If you are experiencing problems, take a look at the <a href="../troubleshooting/">troubleshooting</a> section.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<h3 id="with-pip">with pip<a class="headerlink" href="#with-pip" title="Permanent link">&para;</a></h3>
-<p>Material for MkDocs can be installed with <code>pip</code>:</p>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Material for MkDocs</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>pip install mkdocs-material
-</code></pre></div>
-</div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Insiders</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>pip install git+https://<span class="si">${</span><span class="nv">GH_TOKEN</span><span class="si">}</span>@github.com/squidfunk/mkdocs-material-insiders.git
-</code></pre></div>
-</div>
-</div>
-<p>This will automatically install compatible versions of all dependencies:
-<a href="https://www.mkdocs.org">MkDocs</a>, <a href="https://python-markdown.github.io/">Markdown</a>, <a href="https://pygments.org/">Pygments</a> and <a href="https://facelessuser.github.io/pymdown-extensions/">Python Markdown Extensions</a>.
-Material for MkDocs always strives to support the latest versions, so there's
-no need to install those packages separately.</p>
-<p><em>Note that in order to install <a href="insiders.md">Insiders</a>, you'll need to <a href="insiders.md#how-to-become-a-sponsor">become a
-sponsor</a>, create a personal access token<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, and set the</em> <code>GH_TOKEN</code>
-<em>environment variable to the token's value.</em></p>
-<h3 id="with-docker">with docker<a class="headerlink" href="#with-docker" title="Permanent link">&para;</a></h3>
-<p>The official <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/">Docker image</a> is a great way to get up and running in a few
-minutes, as it comes with all dependencies pre-installed. Pull the image for the 
-<code>latest</code> version with:</p>
-<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Material for MkDocs</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>docker pull squidfunk/mkdocs-material
-</code></pre></div>
-</div>
-<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Insiders</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>docker login -u ${GH_USERNAME} -p ${GH_TOKEN} ghcr.io
-docker pull ghcr.io/squidfunk/mkdocs-material-insiders
-</code></pre></div>
-</div>
-</div>
-<p>The <code>mkdocs</code> executable is provided as an entry point and <code>serve</code> is the 
-default command. If you're not familiar with Docker don't worry, we have you
-covered in the following sections.</p>
-<p>The following plugins are bundled with the Docker image:</p>
-<ul>
-<li><a href="https://github.com/byrnereese/mkdocs-minify-plugin">mkdocs-minify-plugin</a></li>
-<li><a href="https://github.com/datarobot/mkdocs-redirects">mkdocs-redirects</a></li>
-</ul>
-<p><em>Note that in order to install <a href="insiders.md">Insiders</a>, you'll need to <a href="insiders.md#how-to-become-a-sponsor">become a
-sponsor</a>, create a personal access token<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>, and set the</em> <code>GH_TOKEN</code> 
-<em>environment variable to the token's value.</em></p>
-<details class="question"><summary>How to add plugins to the Docker image?</summary><p>Material for MkDocs bundles useful and common plugins while trying not to
-blow up the size of the official image. If the plugin you want to use is
-not included, create a new <code>Dockerfile</code> and extend the official Docker image
-with your custom installation routine:</p>
-<div class="highlight"><pre><span></span><code><span class="k">FROM</span> <span class="s">squidfunk/mkdocs-material</span>
-<span class="k">RUN</span> pip install ...
-</code></pre></div>
-<p>Next, you can build the image with the following command:</p>
-<div class="highlight"><pre><span></span><code>docker build -t squidfunk/mkdocs-material .
-</code></pre></div>
-<p>The new image can be used exactly like the official image.</p>
-</details>
 <h3 id="with-git">with git<a class="headerlink" href="#with-git" title="Permanent link">&para;</a></h3>
-<p>Material for MkDocs can be directly used from <a href="https://github.com/squidfunk/mkdocs-material">GitHub</a> by cloning the
-repository into a subfolder of your project root which might be useful if you
-want to use the very latest version:</p>
-<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Material for MkDocs</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>git clone https://github.com/squidfunk/mkdocs-material.git
-</code></pre></div>
-</div>
-<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Insiders</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>git clone git@github.com:squidfunk/mkdocs-material-insiders.git mkdocs-material
+<p>Installing netSys using <code>git</code> is the most common way to install netSys.</p>
+<div class="tabbed-set" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">git</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>git clone {URL}
 </code></pre></div>
 </div>
 </div>
-<p>The theme will reside in the folder <code>mkdocs-material/material</code>. When cloning
-from <code>git</code>, you must install all required dependencies yourself:</p>
-<div class="highlight"><pre><span></span><code>pip install -r mkdocs-material/requirements.txt
+<h3 id="with-pack">with pack<a class="headerlink" href="#with-pack" title="Permanent link">&para;</a></h3>
+<p>Installing netSys using <code>pack</code> is an alternative to git.</p>
+<p>You can use <code>pack pickup</code> or <code>pack install</code>.</p>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">pack install</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>pack install netsys
 </code></pre></div>
-<p><em>Note that in order to install <a href="insiders.md">Insiders</a>, you'll need to <a href="insiders.md#how-to-become-a-sponsor">become a
-sponsor</a>.</em></p>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>In order to use <code>pip</code> to install from the private repository over HTTPS, the
-<a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token">personal access token</a> requires the <a href="https://docs.github.com/en/developers/apps/scopes-for-oauth-apps#available-scopes"><code>repo</code></a> scope. The creation
-and usage of an access token is only necessary when installing Insiders
-over HTTPS, which is the recommended way when building from within a CI/CD
-workflow, e.g. using <a href="publishing-your-site.md#github-pages">GitHub Pages</a> or <a href="publishing-your-site.md#gitlab-pages">GitLab Pages</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:2">
-<p>If you want to use <code>docker</code> to pull the private Docker image from the
-<a href="https://docs.github.com/en/free-pro-team@latest/packages/getting-started-with-github-container-registry/about-github-container-registry">GitHub Container Registry</a>, the <a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token">personal access token</a> requires
-the <a href="https://docs.github.com/en/developers/apps/scopes-for-oauth-apps#available-scopes"><code>read:packages</code></a> scope. Note that you need to login before pulling
-the Docker image. As an example, see the <a href="https://github.com/squidfunk/mkdocs-material/blob/master/.github/workflows/publish.yml"><code>publish</code></a> workflow of the
-Material for MkDocs repository. You'll also need to enable "<a href="https://docs.github.com/en/free-pro-team@latest/packages/guides/enabling-improved-container-support">Improved Container Support</a>"
-on your account.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-</ol>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">pack pickup</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>pack pickup STAR_netsys
+</code></pre></div>
+</div>
+</div>
+<h2 id="modules">Modules<a class="headerlink" href="#modules" title="Permanent link">&para;</a></h2>
+<p>By default, netSys is shipped with node.js and the following modules.</p>
+<ul>
+<li><a class="magiclink magiclink-github magiclink-repository" href="https://github.com/discordjs/opus" title="GitHub Repository: discordjs/opus">discordjs/opus</a></li>
+<li><a class="magiclink magiclink-github magiclink-repository" href="https://github.com/discordjs/discord.js" title="GitHub Repository: discordjs/discord.js">discordjs/discord.js</a></li>
+<li><a class="magiclink magiclink-github magiclink-repository" href="https://github.com/moldotla/dotenv" title="GitHub Repository: moldotla/dotenv">moldotla/dotenv</a></li>
+<li><a class="magiclink magiclink-github magiclink-repository" href="https://github.com/firebase/firebase-js-sdk" title="GitHub Repository: firebase/firebase-js-sdk">firebase/firebase-js-sdk</a></li>
+<li>fs</li>
+<li><a class="magiclink magiclink-github magiclink-repository" href="https://github.com/talmobi/yt-search" title="GitHub Repository: talmobi/yt-search">talmobi/yt-search</a></li>
+<li><a class="magiclink magiclink-github magiclink-repository" href="https://github.com/fent/node-ytdl-core" title="GitHub Repository: fent/node-ytdl-core">fent/node-ytdl-core</a></li>
+</ul>
+<p>It is recommended to update these modules on a fresh install, you can use the terminal for this.</p>
+<div class="tabbed-set" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">npm</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>npm install 
+</code></pre></div>
+</div>
 </div>
                 
                   
