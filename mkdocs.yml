@@ -53,7 +53,7 @@ theme:
     - navigation.sections
     - navigation.tabs
   palette:
-    scheme: default
+    scheme: slate
     primary: deep orange
     accent: deep orange
   font:
