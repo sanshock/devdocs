@@ -19,21 +19,19 @@
 # IN THE SOFTWARE.
 
 # Project information
-site_name: Material for MkDocs
-site_url: https://squidfunk.github.io/mkdocs-material/
-site_author: Martin Donath
+site_name: netSys Documentation
+site_url: https://stardocs.netlify.app
+site_author: jro_k
 site_description: >-
-  Create a branded static site from a set of Markdown files to host the
-  documentation of your Open Source or commercial project – customizable,
-  searchable, mobile-friendly, 40+ languages
+  netSys is a new foundation build for modularity, simplicity, ease-of-use, and compatibility.
 
 # Repository
-repo_name: squidfunk/mkdocs-material
-repo_url: https://github.com/squidfunk/mkdocs-material
+repo_name: star-corp/devdocs
+repo_url: https://github.com/star-corp/devdocs
 edit_uri: ""
 
 # Copyright
-copyright: Copyright &copy; 2016 - 2021 Martin Donath
+copyright: Copyright &copy; 2019-2021 starCorp 
 
 # Configuration
 theme:
@@ -56,8 +54,8 @@ theme:
     - navigation.tabs
   palette:
     scheme: default
-    primary: indigo
-    accent: indigo
+    primary: deep orange
+    accent: deep orange
   font:
     text: Roboto
     code: Roboto Mono
@@ -72,18 +70,8 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/squidfunk
-    - icon: fontawesome/brands/gitter
-      link: https://gitter.im/squidfunk/mkdocs-material
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/squidfunk/mkdocs-material/
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/squidfunk
-    - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/squidfunk/
-    - icon: fontawesome/brands/instagram
-      link: https://instagram.com/squidfunk
-
+      link: https://github.com/star-corp
+  
 # Extensions
 markdown_extensions:
   - admonition
